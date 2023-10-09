@@ -51,5 +51,6 @@ color: green;
 
 @media only screen and (max-width: 700px){
     #navbar ul{
+        margin-top: 1rem;
 }
 }
