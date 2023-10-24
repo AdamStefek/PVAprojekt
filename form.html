@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulář</title>
+    <style>
+      .container {
+        max-width: 600px;
+        margin: 10px auto;
+        background-color: gray;
+        padding: 1rem;
+        border: 2px black solid;
+        box-shadow: black;
+        border-radius: 15px;
+      }
+      fieldset{
+        background-color: rgb(145, 144, 144);
+        border: 1px solid black;
+        margin: 0px 5px 10px 0px;
+        box-shadow: 5px 5px 5px 5px rgb(93, 93, 93);
+
+      }
+
+      h1 {
+        text-align: center;
+      }
+      input {
+        padding: 5px;
+        margin: 5px 0;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registrační formulář</h1>
+      <form>
+        <fieldset>
+          <div>
+            <label for="name">Jméno</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Zadejte své jméno"
+            />
+            <label for="surname">Přijmení</label>
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Zadejte své příjmení"
+            />
+          </div>
+        </fieldset>
+        <label for="cars">Oblíbené auto</label>
+        <select name="cars" id="cars">
+            <option value="ferrari">Ferrari</option>
+            <option value="alfa">Alfaromeo</option>
+            <option value="lambo">Lamborghini</option>
+            <option value="porsche">Porsche</option>
+        </select>
+        <p></p>
+            <textarea name="textarea" id="textarea" cols="45" rows="10" placeholder="Zadejte nějaký text"></textarea>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Nemám auto</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> Mám auto</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3">Mám více jak 2 auta</label>
+            <input type="submit" value="Odeslat" />
+      </form>
+    </div>
+  </body>
+</html>
