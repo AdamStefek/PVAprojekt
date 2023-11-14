@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulář</title>
     <style>
+      table,
+      tr,
+      td{
+    border: 2px solid black;
+    color: red;
+}
+
+      th{ 
+    border: 2px solid black;
+    color: black;
+    text-align: left;
+}
+
       .container {
         max-width: 600px;
         margin: 10px auto;
@@ -33,44 +46,120 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <body><div class="container">
       <h1>Registrační formulář</h1>
       <form>
-        <fieldset>
-          <div>
-            <label for="name">Jméno</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Zadejte své jméno"
-            />
-            <label for="surname">Přijmení</label>
-            <input
-              type="text"
-              name="surname"
-              id="surname"
-              placeholder="Zadejte své příjmení"
-            />
-          </div>
-        </fieldset>
-        <label for="cars">Oblíbené auto</label>
-        <select name="cars" id="cars">
-            <option value="ferrari">Ferrari</option>
-            <option value="alfa">Alfaromeo</option>
-            <option value="lambo">Lamborghini</option>
-            <option value="porsche">Porsche</option>
-        </select>
-        <p></p>
-            <textarea name="textarea" id="textarea" cols="45" rows="10" placeholder="Zadejte nějaký text"></textarea>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> Nemám auto</label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> Mám auto</label><br>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3">Mám více jak 2 auta</label>
-            <input type="submit" value="Odeslat" />
+          <fieldset>
+              <legend>Údaje</legend>
+          <label for="name">Jméno</label>
+          <input type="text" name="name" id="name" placeholder="Zadej své jméno">
+          <label for="surname">Příjmení</label>
+          <input type="text" name="surname" id="surname" placeholder="Zadej své příjmení">
+          </fieldset>
+          <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Škoda</option>
+              <option value="fiat">BMW</option>
+              <option value="audi">Audi</option>
+          </select>
+          <p></p>
+          <textarea name="message" rows="10" cols="30">
+          </textarea>
+          <p></p>
+          <form>
+              <label for="vehicle1">Chodím pěšky</label><br>
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle2">Mám kolo</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label for="vehicle3">Mám auto</label>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            </form>
+            <form>
+              <label for="vehicle1">Kolik km chodíš</label><br>
+              <input type="radiox" id="vehicle1" name="vehicle1" value="">
+              <label for="vehicle2">Jaké máš kolo</label><br>
+              <input type="radiox" id="vehicle2" name="vehicle2" value="">
+              <label for="vehicle3">Jaké máš auto</label>
+              <input type="radiox" id="vehicle3" name="vehicle3" value="">
+            </form>
+          <input type="submit" value="Odeslat">
       </form>
-    </div>
-  </body>
+  </div>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3" class="nadpis">Výdělky Filmů</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>název filmu</th>
+      <th>USA</th>
+      <th>Celosvětově</th>
+    </tr>
+    <tr>
+      <th>Following</th>
+      <td>$48,482</td>
+      <td>$240,495</td>
+    </tr>
+    <tr>
+      <th>Memento</th>
+      <td>$25,544,867</td>
+      <td>$39,719,431</td>
+    </tr>
+    <tr>
+      <th>Film Noir: Bringing Darkness Into Light</th>
+      <td>$5,584,667</td>
+      <td>$9,419,231</td>
+    </tr>
+    <tr>
+      <th>Batman begins</th>
+      <td>$205,547,248</td>
+      <td>$371,852,546</td>
+    </tr>
+    <tr>
+      <th>Dokonalý trik</th>
+      <td>$53,089,891</td>
+      <td>$104,407,366</td>
+    </tr>
+    <tr>
+      <th>Temný rytíř</th>
+      <td>$533,720,947</td>
+      <td>$998,725,484</td>
+    </tr>
+    <tr>
+      <th>Inception</th>
+      <td>$292,576,195</td>
+      <td>$825,793,570</td>
+    </tr>
+    <tr>
+      <th>The Dark Knight Rises</th>
+      <td>$377,722,486</td>
+      <td>$1,082,254,158</td>
+    </tr>
+    <tr>
+      <th>Interstellar</th>
+      <td>$490,547,265</td>
+      <td>$678,548,260</td>
+    </tr>
+    <tr>
+      <th>Dunkerk</th>
+      <td>$188,254,158</td>
+      <td>$525,187,125</td>
+    </tr>
+    <tr>
+      <th>Tenet</th>
+      <td>$58.545,267</td>
+      <td>$363.725,478</td>
+    </tr>
+    <tr>
+      <th>Oppenheimer</th>
+      <td>$310,158,485</td>
+      <td>$853.245,846</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
 </html>

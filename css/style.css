@@ -130,7 +130,7 @@ font-size: 1.25rem;
 
 #what .items {
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 #what .item {
@@ -140,6 +140,7 @@ font-size: 1.25rem;
 }
 
 #what .items .item i {
+
     background: red;
     padding: 1rem;
     border-radius: 50%;
@@ -188,6 +189,7 @@ font-size: 1.25rem;
 
 
 #who .who-img {
+    max-width: 600px;
         background: #333 url("../img/zivotopis.jpg") no-repeat center center/cover;
         height: 90vh;
         width: 100%;
@@ -249,4 +251,22 @@ th{
     border: 2px solid black;
     color: black;
     text-align: left;
+}
+
+@media screen and (max-width: 600px;) {
+    #navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #who .who-img {
+        display: none;
+    }
+    
+    #what .item {
+        margin: auto;
+        
+    }
+
+
+    
 }
