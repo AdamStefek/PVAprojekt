@@ -216,14 +216,19 @@ font-size: 1.25rem;
 }
 
 .head3 {
-    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
     color: white;
     font-size: 1.25rem;
 }
 
+.text-ziv{
+margin: 1rem;
 
+}
 .ziv-text {
-    text-align: left;
+    margin-left: 3rem;
+    text-align: center;
     color: red;
     font-size: 4.5rem;
 }
