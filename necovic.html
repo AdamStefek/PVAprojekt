@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Další Informace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(48, 57, 52);
+        }
+
+        #logo {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .text-cervena {
+            color: red;
+            font-size: 1.25rem;
+        }
+
+        #navbar {
+            background-color: #333333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            flex-wrap: wrap;
+            position: fixed;
+            width: 100%;
+            font-size: 1rem;
+            top: 0;
+            z-index: 1000; /* ensure navbar stays on top */
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        #navbar ul li a {
+            padding: 0.75rem;
+            margin: 0 0.25rem;
+        }
+
+        #navbar ul li a:hover {
+            background-color: lightblue;
+            border-radius: 5px;
+            color: black;
+        }
+
+        @media only screen and (max-width: 700px) {
+            #navbar ul {
+                margin-top: 1rem;
+            }
+        }
+
+        #showcase {
+            background: #333 url("../img/intestellar.jpg") no-repeat center center/cover;
+            height: 105vh;
+            color: white;
+        }
+
+        #showcase .showcase-content {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0.2rem;
+            display: flex;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .l-heading {
+            font-size: 4rem;
+            margin-top: 1rem;
+            line-height: 1.1;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            background-color: red;
+            padding: 1.25rem;
+            border: none;
+            border-radius: 100px;
+            text-decoration: none;
+        }
+
+        .image-container {
+          max-height: 500px;
+            position: relative;
+            max-width: 350px;
+            margin: 20px;
+            overflow: hidden;
+            border: solid rgb(179, 68, 68) 1px;
+            border-radius: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container:hover img {
+            filter: blur(20px) ;
+        }
+
+        .image-container .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 0, 0);
+            font-size: 14px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        #rozloz {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 2rem;
+            margin-top: 5rem; 
+        }
+    </style>
+</head>
+<body id="home">
+    <nav id="navbar">
+        <div id="logo">
+            <a href="index.html">
+                <i class="fa-solid fa-video"></i>
+                Christopher Nolan
+                <span class="text-cervena">Geniální režisér</span>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li><a href="form.html">Formulář</a></li>
+        </ul>
+    </nav>
+    <div id="rozloz">
+        <div class="image-container">
+            <img src="../img/nolan_batman.jpg" alt="Nolan Batman">
+            <div class="overlay">Christopher Nolan natočil některé akční a tiché dramatické sekvence ve formátu IMAX. Christopher Nolan řekl, že se při výrobě filmu nechal nejvíce ovlivnit filmem Nelítostný souboj.</div>
+        </div>
+        <div class="image-container">
+            <img src="../img/nolan_dunkirk.jpg" alt="Nolan Dunkirk">
+            <div class="overlay">Nolan nechal zakoupit skutečné letadlo a havarovat jej do moře, později Nolan dovysvětlil, že se používaly funkční repliky skutečných letadel, nikoliv autentické historické kusy</div>
+        </div>
+        <div class="image-container">
+            <img src="../img/nolan_murphy.jpg" alt="Nolan Murphy">
+            <div class="overlay">Spolupráce Christophera nolana a Ciliana Murphyho je dlouhá už 20 let a společně už vytvořili 6 filmů.</div>
+        </div>
+        <div class="image-container">
+            <img src="../img/nolan_tenet.jpeg" alt="Nolan Tenet">
+            <div class="overlay">Sir Kenneth Branagh prozradil, že odpůrci trvali na tom, že režisér Christopher Nolan nebude schopen film dokončit kvůli koronaviru. Režisér však vytrval v postprodukci, snížil počet techniků v míchárně z jedenácti na pět, nosil masky a praktikoval sociální distanc.</div>
+        </div>
+        <div class="image-container">
+            <img src="../img/nolan_zena.jpg" alt="Nolan Zena">
+            <div class="overlay">Dame Emma Thomas, Lady Nolan , je britská filmová producentka. Produkovala všechny celovečerní filmy režírované jejím manželem sirem Christopherem Nolanem , které celosvětově vydělaly více než 6 miliard dolarů a jsou považovány za jedny z nejlepších filmů svých dekád.</div>
+        </div>
+        <div class="image-container">
+            <img src="../img/oppenheimer.jpg" alt="Oppenheimer">
+            <div class="overlay">Film Oppenheimer získal díky skvělému režiserskému výkonu Christophera Nolana 7 oscarů a byl také 3. nejvýnosnějším filmem za rok 2023</div>
+        </div>
+    </div>
+</body>
+</html>

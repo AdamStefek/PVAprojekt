@@ -13,7 +13,7 @@ body {
 
 #logo {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 .text-cervena {
 color: red;
@@ -30,6 +30,9 @@ font-size: 1.25rem;
     flex-wrap: wrap;
     position: fixed;
     width: 100%;
+    font-size: 1rem;
+    position: sticky;
+
     
 }
 #navbar a {
@@ -235,6 +238,7 @@ margin: 1rem;
 
 .copy-width {
     width: 100%;
+    margin-top: 20px;
 }
 
 .nadpis {
@@ -258,7 +262,7 @@ th{
     text-align: left;
 }
 
-@media screen and (max-width: 600px;) {
+@media screen and (max-width: 600px) {
     #navbar {
         flex-wrap: wrap;
         justify-content: center;
@@ -270,7 +274,19 @@ th{
     #what .item {
         margin: auto;
     }
-
-
-    
+ 
 }
+.image-container { 
+    max-width: 250px;
+    max-height: 250px;
+    margin: 20px;
+  }
+
+  #rozloz {
+    max-width: 100%;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+    display: center;
+    height: 100%;
+  }
