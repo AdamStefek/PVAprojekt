@@ -111,12 +111,11 @@
 
         .image-container {
           max-height: 500px;
-            position: relative;
-            max-width: 350px;
-            margin: 20px;
-            overflow: hidden;
-            border: solid rgb(179, 68, 68) 1px;
-            border-radius: 20px;
+          max-width: 450px;
+          position: relative;
+          overflow: hidden;
+          border: solid rgb(179, 68, 68) 1px;
+          border-radius: 20px;
         }
 
         .image-container img {
@@ -125,7 +124,7 @@
         }
 
         .image-container:hover img {
-            filter: blur(20px) ;
+            filter: blur(20px);
         }
 
         .image-container .overlay {
@@ -134,7 +133,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: rgb(255, 0, 0);
-            font-size: 14px;
+            font-size: 13px;
             text-align: center;
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -145,11 +144,9 @@
         }
 
         #rozloz {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
             padding: 2rem;
             margin-top: 5rem; 
         }
