@@ -15,9 +15,10 @@ body {
     font-weight: bold;
     font-size: 1.25rem;
 }
+
 .text-cervena {
-color: red;
-font-size: 1.25rem;
+    color: red;
+    font-size: 1.25rem;
 }
 
 
@@ -56,9 +57,20 @@ font-size: 1.25rem;
 }
 
 @media only screen and (max-width: 700px){
-    #navbar ul{
+    #navbar {
+        margin: auto;
+        padding: auto;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    #navbar ul {
+        flex-direction: row;
         margin-top: 1rem;
     }
+    #navbar ul li {
+        margin: auto;
+    }
+
 }
 
 
@@ -106,6 +118,12 @@ font-size: 1.25rem;
     padding: 0.2rem;
     overflow: hidden;
 }
+.container2{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0.2rem;
+    overflow: hidden;
+}
 
 .text-center {
     text-align: center;
@@ -131,14 +149,15 @@ font-size: 1.25rem;
 }
 
 #what .items {
+    width: 100%;
     display: flex;
     padding: 1rem;
 }
 
 #what .item {
     text-align: center;
-    padding: 2rem;
-    margin: auto;
+    padding: 20px;
+    margin: 20px;
 }
 
 #what .items .item i {
