@@ -4,7 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulář</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(48, 57, 52);
+        }
+
+        #logo {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .text-cervena {
+            color: red;
+            font-size: 1.25rem;
+        }
+
+        #navbar {
+            background-color: #333333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            flex-wrap: wrap;
+            position: fixed;
+            width: 100%;
+            font-size: 1rem;
+            top: 0;
+            z-index: 1000; 
+            height: 5.5rem;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        #navbar ul li a {
+            padding: 0.75rem;
+            margin: 0 0.25rem;
+        }
+
+        #navbar ul li a:hover {
+            background-color: lightblue;
+            border-radius: 5px;
+            color: black;
+        }
+
+        @media only screen and (max-width: 700px) {
+            #navbar ul {
+                margin-top: 1rem;
+            }
+        }
+
+        #showcase {
+            background: #333 url("../img/intestellar.jpg") no-repeat center center/cover;
+            height: 105vh;
+            color: white;
+        }
+
+        #showcase .showcase-content {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0.2rem;
+            display: flex;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .l-heading {
+            font-size: 4rem;
+            margin-top: 1rem;
+            line-height: 1.1;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+            background-color: red;
+            padding: 1.25rem;
+            border: none;
+            border-radius: 100px;
+            text-decoration: none;
+        }
+
       table,
       tr,
       td{
@@ -20,23 +131,26 @@
 
       .container {
         max-width: 600px;
-        margin: 10px auto;
-        background-color: gray;
+        margin: 10rem auto;
+        background-color: red;
         padding: 1rem;
         border: 2px black solid;
         box-shadow: black;
         border-radius: 15px;
       }
       fieldset{
-        background-color: rgb(145, 144, 144);
-        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgb(223, 58, 58);
+        border: 2px solid black;
         margin: 0px 5px 10px 0px;
-        box-shadow: 5px 5px 5px 5px rgb(93, 93, 93);
+        box-shadow: 5px 5px 5px 5px rgb(120, 3, 3);
 
       }
 
       h1 {
         text-align: center;
+        font-style: italic;
+
       }
       input {
         padding: 5px;
@@ -45,9 +159,28 @@
       }
     </style>
   </head>
-  <body>
-    <body><div class="container">
-      <h1>Registrační formulář</h1>
+    <body id="home">
+      <nav id="navbar">
+        <div id="logo">
+          <a href="index.html">
+            <i class="fa-solid fa-video"></i>
+            Christopher Nolan
+            <span class="text-cervena">Geniální režisér</span>
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html#home"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="index.html#who">O režisérovi</a></li>
+          <li><a href="index.html#Filmy">Filmy</a></li>
+          <li><a href="index.html#zdroje">Zdroje</a></li>
+          <li><a href="form.html">Formulář</a></li>
+          <li><a href="necovic.html">Další Informace</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          </nav>
+          <div class="container">
+      <h1>Formulář Christophera Nolana</h1>
       <form>
           <fieldset>
               <legend>Údaje</legend>
@@ -56,32 +189,36 @@
           <label for="surname">Příjmení</label>
           <input type="text" name="surname" id="surname" placeholder="Zadej své příjmení">
           </fieldset>
-          <label for="cars">Choose a car:</label>
+          <label for="cars">Vyberte film:</label>
           <select id="cars" name="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Škoda</option>
-              <option value="fiat">BMW</option>
-              <option value="audi">Audi</option>
+              <option value="Interstellar">Interstellar</option>
+              <option value="Inception">Inception</option>
+              <option value="Oppenheimer">Oppenheimer</option>
+              <option value="Dunkirk">Dunkirk</option>
+              <option value="Tenet">Tenet</option>
+              <option value="Dark_Knight">Dark Knight</option>
+              
+
           </select>
           <p></p>
           <textarea name="message" rows="10" cols="30">
           </textarea>
           <p></p>
           <form>
-              <label for="vehicle1">Chodím pěšky</label><br>
-              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-              <label for="vehicle2">Mám kolo</label><br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-              <label for="vehicle3">Mám auto</label>
-              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label for="Otazka1">viděl jsem</label><br>
+              <input type="checkbox" id="Otazka1" name="Otazka1" value="Film">
+              <label for="Otazka2">Neviděl jsem</label><br>
+              <input type="checkbox" id="Otazka2" name="Otazka2" value="Ne">
+              <label for="Otazka3">Miluju to!</label>
+              <input type="checkbox" id="Otazka3" name="Otazka3" value="Miluju_to!">
             </form>
             <form>
-              <label for="vehicle1">Kolik km chodíš</label><br>
-              <input type="radiox" id="vehicle1" name="vehicle1" value="">
-              <label for="vehicle2">Jaké máš kolo</label><br>
-              <input type="radiox" id="vehicle2" name="vehicle2" value="">
-              <label for="vehicle3">Jaké máš auto</label>
-              <input type="radiox" id="vehicle3" name="vehicle3" value="">
+              <label for="Otazka1">Kolikrát jsi tento film viděl?</label><br>
+              <input type="radiox" id="Otazka1" name="Otazka1" value="">
+              <label for="Otazka2">Tvoje nejoblíbenější postava </label><br>
+              <input type="radiox" id="Otazka2" name="Otazka2" value="">
+              <label for="Otazka3">Nejlepší herecký výkon ve filmu</label>
+              <input type="radiox" id="Otazka3" name="Otazka3" value="">
             </form>
           <input type="submit" value="Odeslat">
       </form>

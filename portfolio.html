@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+          rel="stylesheet"
+        />
+<link
+          href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+          rel="stylesheet"
+        />
+<style>
+    :root {
+    --main-white: #f0f0f0;
+    --main-red: red;
+    --main-blue: #5e76b0;
+    --main-gray: #223346;
+  }
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  
+  
+
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+  }
+  
+  h1,
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-white);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  /* nav */
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  
+  .nav-list a:hover {
+    background: var(--main-blue);
+  }
+  
+  /* Welcome section */
+  
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+  
+  .welcome-section > p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-red);
+  }
+  
+  /* Projects section */
+  
+  .projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-blue);
+  }
+  
+  .projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+  }
+  
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+  }
+  
+  /* "Automagic" image grid using no media queries */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  
+  .code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+  }
+  
+  .project:hover .code {
+    color: #ff7f50;
+  }
+  
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+  
+  .btn-show-all {
+    font-size: 2rem;
+    background: var(--main-gray);
+    transition: background 0.3s ease-out;
+  }
+  
+  .btn-show-all:hover {
+    background: var(--main-red);
+  }
+  
+  .btn-show-all:hover > i {
+    transform: translateX(2px);
+  }
+  
+  .btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* Contact section */
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 6rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  
+  /* Footer */
+  
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: var(--main-gray);
+    border-top: 4px solid var(--main-red);
+  }
+  
+  footer > p {
+    margin: 2rem;
+  }
+  
+  footer i {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(48, 57, 52);
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+.text-cervena {
+    color: red;
+    font-size: 2.25rem;
+}
+
+#navbar {
+    background-color: #333333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    font-size: 1.75rem;
+    top: 0;
+    z-index: 1000; 
+    height: 8rem;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navbar ul li a {
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+    background-color: lightblue;
+    border-radius: 5px;
+    color: black;
+}
+
+@media only screen and (max-width: 700px) {
+    #navbar ul {
+        margin-top: 1rem;
+    }
+}
+
+#showcase {
+    background: #333 url("../img/intestellar.jpg") no-repeat center center/cover;
+    height: 105vh;
+    color: white;
+}
+
+#showcase .showcase-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    display: flex;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.l-heading {
+    font-size: 4rem;
+    margin-top: 1rem;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    background-color: red;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+table,
+tr,
+td{
+border: 2px solid black;
+color: red;
+}
+
+th{ 
+border: 2px solid black;
+color: black;
+text-align: left;
+}
+
+.container {
+max-width: 600px;
+margin: 10rem auto;
+background-color: red;
+padding: 1rem;
+border: 2px black solid;
+box-shadow: black;
+border-radius: 15px;
+}
+fieldset{
+border-radius: 10px;
+background-color: rgb(223, 58, 58);
+border: 2px solid black;
+margin: 0px 5px 10px 0px;
+box-shadow: 5px 5px 5px 5px rgb(120, 3, 3);
+
+}
+
+h1 {
+text-align: center;
+font-style: italic;
+
+}
+input {
+padding: 5px;
+margin: 5px 0;
+display: flex;
+}
+</style>
+      </head>
+      <body>
+
+
+        <nav id="navbar">
+          <div id="logo">
+            <a href="index.html">
+              <i class="fa-solid fa-video"></i>
+              Christopher Nolan
+              <span class="text-cervena">Geniální režisér</span>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href="#home"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li><a href="index.html#who">O režisérovi</a></li>
+            <li><a href="index.html#Filmy">Filmy</a></li>
+            <li><a href="index.html#zdroje">Zdroje</a></li>
+            <li><a href="form.html">Formulář</a></li>
+            <li><a href="necovic.html">Další Informace</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </nav>
+
+
+        <section id="welcome-section" class="welcome-section">
+          <h1>Adam Štefek</h1>
+          <p>student</p>
+        </section>
+
+
+
+        <section id="projects" class="projects-section">
+          <h2 class="projects-section-header">Mé projekty</h2>
+
+          <div class="projects-grid">
+            <a
+              href="https://adamstefek.github.io/google_serch/"
+              target="_blank"
+              class="project project-tile"
+            >
+              <img
+                class="project-image"
+                src="../img/google.PNG"
+                alt="project"
+              />
+              <p class="project-title">
+<span class="code">&lt;</span>
+                Google search
+                <span class="code">&#47;&gt;</span>
+              </p>
+            </a>
+            <a
+              href="https://adamstefek.github.io/PVAprojekt/"
+              target="_blank"
+              class="project project-tile"
+            >
+              <img
+                class="project-image"
+                src="../img/nolan.png"
+                alt="project"
+              />
+              <p class="project-title">
+                <span class="code">&lt;</span>
+                Christopher Nolan
+                <span class="code">&#47;&gt;</span>
+              </p>
+            </a>
+            <a
+              href="https://adamstefek.github.io/PVAprojekt/"
+              target="_blank"
+              class="project project-tile"
+            >
+              <img
+                class="project-image"
+                src="../img/form.PNG"
+                alt="project"
+              />
+              <p class="project-title">
+                <span class="code">&lt;</span>
+                Formulář
+                <span class="code">&#47;&gt;</span>
+              </p>
+            </a>
+
+
+
+
+
+
+            </a>
+          </div>
+
+
+        </section>
+
+
+        <footer>
+          <p>
+            Portfolio Adama Štefek
+          </p>
+
+        </footer>
+
+
+      </body>
+    </html>

@@ -28,13 +28,11 @@ font-size: 1.25rem;
     justify-content: space-between;
     padding: 1rem;
     flex-wrap: wrap;
-    position: fixed;
     width: 100%;
     font-size: 1rem;
-    position: sticky;
-
-    
+    position: fixed;
 }
+
 #navbar a {
     color: white;
     text-decoration: none;
@@ -44,12 +42,11 @@ font-size: 1.25rem;
     display: flex;
     list-style: none;
     align-items: center;
-
 }
 
 #navbar ul li a {
-    padding: 0.75rem;
-    margin: 0.0.25;
+    padding: 0.50rem;
+    margin: auto; 
 }
 
 #navbar ul li a:hover {
@@ -61,8 +58,9 @@ font-size: 1.25rem;
 @media only screen and (max-width: 700px){
     #navbar ul{
         margin-top: 1rem;
+    }
 }
-}
+
 
 #showcase {
     background: #333 url("../img/intestellar.jpg") no-repeat center center/cover;
@@ -103,7 +101,7 @@ font-size: 1.25rem;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 500px;
     margin: auto;
     padding: 0.2rem;
     overflow: hidden;
@@ -114,6 +112,7 @@ font-size: 1.25rem;
 }
 
 .m-heading {
+    margin-top: 2rem;
     font-size: 2rem;
     margin-bottom: 0.75;
     line-height: 1.1;
@@ -151,7 +150,9 @@ font-size: 1.25rem;
 }
 
 .filmy-text {
-    margin: 5px 0px 20px 0px;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     text-align: center;
     color: red;
     font-size: 4rem;
@@ -163,11 +164,6 @@ font-size: 1.25rem;
     color: grey;
 }
 
-.oreziserovy-text {
-    text-align: center;
-    color: red;
-    font-size: 2rem;
-}
 
 .bg-light {
     background: white;
@@ -263,6 +259,9 @@ th{
 }
 
 @media screen and (max-width: 600px) {
+    .tabulky{
+        flex-direction: column;
+    }
     #navbar {
         flex-wrap: wrap;
         justify-content: center;
@@ -290,3 +289,8 @@ th{
     display: center;
     height: 100%;
   }
+
+.tabulky {
+    display: flex;
+    justify-content: space-between;
+}
